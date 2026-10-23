@@ -3,37 +3,26 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "b2b-verzugszinsen"
+name = "verzugszinsen-b2b"
 version = "1.0.0"
-description = "Taggenaue kaufmännische Verzugszinsberechnung & Mahnwesen im DACH-Raum (§ 288 BGB, § 456 UGB, Art. 104 OR)"
 authors = [
-    { name = "DACH Digitalwerk", email = "dach.digitalwerk@gmail.com" }
+  { name="DACH Digitalwerk", email="dach.digitalwerk@gmail.com" },
 ]
-license = { text = "MIT" }
+description = "DACH B2B Verzugszinsen- & Mahnspesen-Rechner 2026 nach § 288 BGB, Art. 104 OR & § 456 UGB inkl. 40-€-Pauschale"
 readme = "README.md"
 requires-python = ">=3.8"
-keywords = [
-    "verzugszinsen",
-    "mahnung",
-    "b2b",
-    "bundesbank-basiszinssatz",
-    "schadenspauschale",
-    "bgb-288",
-    "ugb-456",
-    "schkg",
-    "dach-raum"
-]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Topic :: Office/Business :: Financial :: Accounting"
+    "Topic :: Office/Business :: Financial :: Accounting",
+    "Topic :: Legal",
 ]
+keywords = ["verzugszinsen", "mahnung", "mahnspesen", "bgb-288", "schweizer-recht", "ugb-456", "basiszinssatz", "bundesbank", "b2b"]
 
 [project.urls]
-"Homepage" = "https://github.com/DACHDigitalwerk/verzugszinsen-mahnung-rechner-b2b"
-"Live Rechner" = "https://dach-digitalwerk.netlify.app/mahnung-verzugszinsen-rechner/"
-"Ratgeber & Leitfaden" = "https://dach-digitalwerk.netlify.app/verzugszinsen-berechnen-rechner-b2b.html"
+"Homepage" = "https://dach-digitalwerk.netlify.app/mahnung-verzugszinsen-rechner/"
+"Bug Tracker" = "https://github.com/DACHDigitalwerk/verzugszinsen-mahnung-rechner-b2b/issues"
 
 [project.scripts]
-b2b-zinsen = "b2b_verzugszinsen.cli:main"
+dach-verzugszinsen = "verzugszinsen_b2b.cli:main"
